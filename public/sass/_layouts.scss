@@ -1,0 +1,116 @@
+body{
+    background: palegoldenrod;
+}
+.message{
+    margin-bottom: 5rem;
+
+    & p {
+        font-size: 15px;
+        line-height: 3rem;
+    }
+}
+.cta{
+    display: flex;
+
+    &__perks{
+        flex: 0 0 50%;
+    }
+    
+    &__button{
+        display: inline-block;
+        background: $desaturated-blue-dark;
+        padding: .5rem 1.5rem;
+        border-radius: 3rem;
+        font-size: 11px;
+        font-weight: 800;
+        color: $blue-light;
+    }
+}
+.card{
+    background-color: orange;
+    background-image: url('/public/images/bg-pattern.svg');
+    background-repeat: no-repeat;
+    max-width: 1200px;
+    padding: 5rem 0; 
+}
+.pricing{
+    display: flex;
+    flex-wrap: wrap;
+    &__views{
+        flex: 0 0 50%;
+        text-transform: uppercase;
+        color: $grayish-blue-3;
+        font-size: .8rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+    }
+}
+.pricing-component{
+    background: $white;
+    max-width: 30rem;
+    margin: 0 auto;
+}
+.slider{
+    margin: 2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.message{
+    width: 100%;
+    text-align: center;
+}
+
+input[type=range]{
+    background: $grayish-blue-2;
+    height: .5rem;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    // overflow: hidden;
+}
+input[type="range"]::-moz-range-progress {
+    height: .5rem;
+    background-color: #43e5f7;
+    border-radius: 1rem;
+  }
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    // border: 1px solid #000000;
+    // height: 36px;
+    width: 2.4rem;
+    height:  2.4rem;
+    border-radius: 50%;
+    background-position: center;
+    background-image: url('/public/images/icon-slider.svg');
+    background-color: $cyan-dark;
+    position: relative;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background: lighten($cyan-dark, 10%);
+        background-image: url('/public/images/icon-slider.svg');
+        background-repeat: no-repeat;
+        cursor: pointer;
+        background-position: center;
+        // background-image: inherit;
+    }
+    &:active{
+        cursor: grabbing;
+        background: darken($cyan-dark, 10%);
+        background-image: url('/public/images/icon-slider.svg');
+        background-repeat: no-repeat;
+        cursor: grabbing;
+        background-position: center;
+    }
+  }
+
+
+.test{
+    width: 1440px;
+    background: yellow;
+    // flex: 1;
+    // width: 100;
+    // min-height: 100vh;
+}

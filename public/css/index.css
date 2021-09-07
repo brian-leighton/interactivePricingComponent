@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  font-family: "Manrope", sans-serif;
+}
+
+p {
+  font-size: 15px;
+}
+
+* {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background: palegoldenrod;
+}
+
+.message {
+  margin-bottom: 5rem;
+}
+.message p {
+  font-size: 15px;
+  line-height: 3rem;
+}
+
+.cta {
+  display: flex;
+}
+.cta__perks {
+  flex: 0 0 50%;
+}
+.cta__button {
+  display: inline-block;
+  background: #293356;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+  font-size: 11px;
+  font-weight: 800;
+  color: #bdccff;
+}
+
+.card {
+  background-color: orange;
+  background-image: url("/public/images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  max-width: 1200px;
+  padding: 5rem 0;
+}
+
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pricing__views {
+  flex: 0 0 50%;
+  text-transform: uppercase;
+  color: #858fad;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.pricing-component {
+  background: white;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.slider {
+  margin: 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.message {
+  width: 100%;
+  text-align: center;
+}
+
+input[type=range] {
+  background: #cdd7ee;
+  height: 0.5rem;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 1rem;
+}
+
+input[type=range]::-moz-range-progress {
+  height: 0.5rem;
+  background-color: #43e5f7;
+  border-radius: 1rem;
+}
+
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background-position: center;
+  background-image: url("/public/images/icon-slider.svg");
+  background-color: #10d5c2;
+  position: relative;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-thumb:hover {
+  background: #2aefdb;
+  background-image: url("/public/images/icon-slider.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-position: center;
+}
+input[type=range]::-moz-range-thumb:active {
+  cursor: grabbing;
+  background: #0ca697;
+  background-image: url("/public/images/icon-slider.svg");
+  background-repeat: no-repeat;
+  cursor: grabbing;
+  background-position: center;
+}
+
+.test {
+  width: 1440px;
+  background: yellow;
+}
+
+/*# sourceMappingURL=index.css.map */
