@@ -13,6 +13,7 @@
 </head>
 <body>
     <div class="card">
+        <div class="banner"></div>
         <div class="message">
             <h1>Simple, traffic based pricing</h1>
             <p>Sign-up for our 30-day trial. No credit card required</p>
@@ -25,13 +26,21 @@
                     <div class="pricing__cost--frequency">/ month</div>
                 </div>
                 <form class="slider"><input type="range" min="0" max="100"></form>
-                <div class="pricing__payment-frequency"></div>
+                <div class="pricing__payment-frequency">
+                    <p>Monthly Billing</p>
+                    <div class="input__switch">
+                        <!-- <label for="input__switch">Monthly</label> -->
+                        <input id="input__switch" class="input__switch--btn" type="checkbox">
+                        <label for="input__switch"></label>
+                    </div>
+                    <p>Yearly Billing <span>25% discount</span></p>
+                </div>
             </div>
             <div class="cta">
                 <ul class="cta__perks">
-                    <li>Unlimited websites</li>
-                    <li>100% data ownership</li>
-                    <li>E-mail reports</li>
+                    <li><img src="/public/images/icon-check.svg"> Unlimited websites</li>
+                    <li><img src="/public/images/icon-check.svg">100% data ownership</li>
+                    <li><img src="/public/images/icon-check.svg">E-mail reports</li>
                 </ul>
                 <div>
                     <div class="cta__button">Start my trial</div>

@@ -1,57 +1,149 @@
 body{
     background: palegoldenrod;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner{
+    top: 0;
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    background: red;
+    left: 0;
+    background: url('/public/images/bg-pattern.svg') no-repeat;
+    background-size: cover;
+
 }
 .message{
-    margin-bottom: 5rem;
-
+    margin-bottom: 3.7rem;
+    position: relative;
+    h1{
+        color: $desaturated-blue-dark;
+        font-size: 1.9rem;
+    }
     & p {
         font-size: 15px;
-        line-height: 3rem;
+        line-height: 2.7rem;
+        color: $grayish-blue-3;
     }
 }
 .cta{
     display: flex;
 
+    & ul {
+        list-style: none;
+        padding: 1.5rem 0 1.5rem 3rem;
+        
+    }
+    & ul li {
+        font-size: .81rem;
+        color: $grayish-blue-3;
+        font-weight: 600;
+        &:not(:last-of-type){
+            margin-bottom: 1rem;
+        }
+    }
+    & ul li img{
+        margin-right: .8rem;
+    }
     &__perks{
+        flex: 1;
+    }
+    & div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         flex: 0 0 50%;
     }
-    
     &__button{
         display: inline-block;
+        height: max-content;
+        width: max-content;
         background: $desaturated-blue-dark;
-        padding: .5rem 1.5rem;
+        padding: .65rem 1rem;
         border-radius: 3rem;
-        font-size: 11px;
+        font-size: .75rem;
         font-weight: 800;
         color: $blue-light;
+        transition: all .1s ease-out;
+        &:hover{
+            cursor: pointer;
+            color: $white;
+        }
     }
 }
 .card{
-    background-color: orange;
-    background-image: url('/public/images/bg-pattern.svg');
-    background-repeat: no-repeat;
-    max-width: 1200px;
-    padding: 5rem 0; 
+    background-color: $very-pale-blue;
+    position: relative;
+    background-size: contain;
+    overflow: hidden;
+    width: min(1200px, 100%);
+    padding: 5rem 2rem; 
 }
 .pricing{
     display: flex;
     flex-wrap: wrap;
+    padding: 2rem 0;
     &__views{
+        display: flex;
+        justify-content: center;
+        align-items: center ;
         flex: 0 0 50%;
         text-transform: uppercase;
         color: $grayish-blue-3;
-        font-size: .8rem;
+        font-size: .9rem;
         font-weight: 800;
         letter-spacing: 1px;
     }
+    &__cost{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        &--dollars{
+            font-size: 2rem;
+            font-weight: 800;
+            color: $desaturated-blue-dark;
+        }
+        &--frequency{
+            color: $grayish-blue-3;
+        }
+    }
+    &__payment-frequency{
+        width: 100%;
+        display: flex;
+        gap: .8rem;
+        padding-left: 2.5rem;
+        
+        justify-content: center;
+
+        & p {
+            font-size: 12px;
+            color: $grayish-blue-3;
+            position: relative;
+        }
+        & p span{
+            transform: translateX(10%);
+            width: max-content;
+            font-size: 10px;
+            background: $red-gray;
+            color: $red-light;
+            padding: .12rem .35rem;
+            border-radius: 2rem;
+        }
+    }
 }
 .pricing-component{
+    position: relative;
     background: $white;
     max-width: 30rem;
     margin: 0 auto;
+    box-shadow: 0 .5rem 1rem 0 $grayish-blue-2;
 }
 .slider{
-    margin: 2rem 0;
+    margin: 2.5rem 0 3rem 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -61,13 +153,48 @@ body{
     text-align: center;
 }
 
+.input__switch{
+    & label {
+        font-size: .8rem;
+        width: 2.5rem;
+        height: 1.25rem;
+        border-radius: 1rem;
+        background: $grayish-blue-2;
+        display: block;
+        visibility: visible;
+        position: relative;
+    }
+    & label::after{
+        content: "";
+        height: 1rem;
+        width: 1rem;
+        top: 2px;
+        left: 3px;
+        position: absolute;
+        border-radius: 50%;
+        background: $white;
+        transition: .3s;
+    }
+    // the on state background
+    & label:hover, input:checked + label {
+        cursor: pointer;
+        background: $cyan-dark;
+    }
+    // sliding to the other side
+    & input:checked + label:after{
+        transform: translateX(calc(100% + 2px));
+    }
+}
+input[type=checkbox]{
+    visibility: hidden;
+    position: absolute;
+}
 input[type=range]{
     background: $grayish-blue-2;
     height: .5rem;
     width: 80%;
     margin: 0 auto;
     border-radius: 1rem;
-    // overflow: hidden;
 }
 input[type="range"]::-moz-range-progress {
     height: .5rem;
@@ -76,8 +203,6 @@ input[type="range"]::-moz-range-progress {
   }
 input[type=range]::-moz-range-thumb {
     -webkit-appearance: none;
-    // border: 1px solid #000000;
-    // height: 36px;
     width: 2.4rem;
     height:  2.4rem;
     border-radius: 50%;
@@ -88,13 +213,13 @@ input[type=range]::-moz-range-thumb {
     background-repeat: no-repeat;
     border: none;
     cursor: pointer;
+    box-shadow: 0 .5rem 1.5rem 0 $cyan-dark;
     &:hover{
         background: lighten($cyan-dark, 10%);
         background-image: url('/public/images/icon-slider.svg');
         background-repeat: no-repeat;
         cursor: pointer;
         background-position: center;
-        // background-image: inherit;
     }
     &:active{
         cursor: grabbing;
@@ -105,12 +230,3 @@ input[type=range]::-moz-range-thumb {
         background-position: center;
     }
   }
-
-
-.test{
-    width: 1440px;
-    background: yellow;
-    // flex: 1;
-    // width: 100;
-    // min-height: 100vh;
-}

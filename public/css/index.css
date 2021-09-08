@@ -19,61 +19,152 @@ p {
 
 body {
   background: palegoldenrod;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  top: 0;
+  height: 50vh;
+  width: 100%;
+  position: absolute;
+  background: red;
+  left: 0;
+  background: url("/public/images/bg-pattern.svg") no-repeat;
+  background-size: cover;
 }
 
 .message {
-  margin-bottom: 5rem;
+  margin-bottom: 3.7rem;
+  position: relative;
+}
+.message h1 {
+  color: #293356;
+  font-size: 1.9rem;
 }
 .message p {
   font-size: 15px;
-  line-height: 3rem;
+  line-height: 2.7rem;
+  color: #858fad;
 }
 
 .cta {
   display: flex;
 }
+.cta ul {
+  list-style: none;
+  padding: 1.5rem 0 1.5rem 3rem;
+}
+.cta ul li {
+  font-size: 0.81rem;
+  color: #858fad;
+  font-weight: 600;
+}
+.cta ul li:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+.cta ul li img {
+  margin-right: 0.8rem;
+}
 .cta__perks {
+  flex: 1;
+}
+.cta div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 0 0 50%;
 }
 .cta__button {
   display: inline-block;
+  height: max-content;
+  width: max-content;
   background: #293356;
-  padding: 0.5rem 1.5rem;
+  padding: 0.65rem 1rem;
   border-radius: 3rem;
-  font-size: 11px;
+  font-size: 0.75rem;
   font-weight: 800;
   color: #bdccff;
+  transition: all 0.1s ease-out;
+}
+.cta__button:hover {
+  cursor: pointer;
+  color: white;
 }
 
 .card {
-  background-color: orange;
-  background-image: url("/public/images/bg-pattern.svg");
-  background-repeat: no-repeat;
-  max-width: 1200px;
-  padding: 5rem 0;
+  background-color: #fafbff;
+  position: relative;
+  background-size: contain;
+  overflow: hidden;
+  width: min(1200px, 100%);
+  padding: 5rem 2rem;
 }
 
 .pricing {
   display: flex;
   flex-wrap: wrap;
+  padding: 2rem 0;
 }
 .pricing__views {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 0 0 50%;
   text-transform: uppercase;
   color: #858fad;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 1px;
 }
+.pricing__cost {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.pricing__cost--dollars {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #293356;
+}
+.pricing__cost--frequency {
+  color: #858fad;
+}
+.pricing__payment-frequency {
+  width: 100%;
+  display: flex;
+  gap: 0.8rem;
+  padding-left: 2.5rem;
+  justify-content: center;
+}
+.pricing__payment-frequency p {
+  font-size: 12px;
+  color: #858fad;
+  position: relative;
+}
+.pricing__payment-frequency p span {
+  transform: translateX(10%);
+  width: max-content;
+  font-size: 10px;
+  background: #feece7;
+  color: #ff8c66;
+  padding: 0.12rem 0.35rem;
+  border-radius: 2rem;
+}
 
 .pricing-component {
+  position: relative;
   background: white;
   max-width: 30rem;
   margin: 0 auto;
+  box-shadow: 0 0.5rem 1rem 0 #cdd7ee;
 }
 
 .slider {
-  margin: 2rem 0;
+  margin: 2.5rem 0 3rem 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -82,6 +173,40 @@ body {
 .message {
   width: 100%;
   text-align: center;
+}
+
+.input__switch label {
+  font-size: 0.8rem;
+  width: 2.5rem;
+  height: 1.25rem;
+  border-radius: 1rem;
+  background: #cdd7ee;
+  display: block;
+  visibility: visible;
+  position: relative;
+}
+.input__switch label::after {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  top: 2px;
+  left: 3px;
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  transition: 0.3s;
+}
+.input__switch label:hover, .input__switch input:checked + label {
+  cursor: pointer;
+  background: #10d5c2;
+}
+.input__switch input:checked + label:after {
+  transform: translateX(calc(100% + 2px));
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+  position: absolute;
 }
 
 input[type=range] {
@@ -110,6 +235,7 @@ input[type=range]::-moz-range-thumb {
   background-repeat: no-repeat;
   border: none;
   cursor: pointer;
+  box-shadow: 0 0.5rem 1.5rem 0 #10d5c2;
 }
 input[type=range]::-moz-range-thumb:hover {
   background: #2aefdb;
@@ -125,11 +251,6 @@ input[type=range]::-moz-range-thumb:active {
   background-repeat: no-repeat;
   cursor: grabbing;
   background-position: center;
-}
-
-.test {
-  width: 1440px;
-  background: yellow;
 }
 
 /*# sourceMappingURL=index.css.map */
