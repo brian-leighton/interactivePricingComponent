@@ -18,12 +18,10 @@ p {
 }
 
 body {
-  background: #293356;
+  background: #858fad;
   position: relative;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .banner {
@@ -31,7 +29,6 @@ body {
   height: 50vh;
   width: 100%;
   position: absolute;
-  background: red;
   left: 0;
   background: url("/public/images/bg-pattern.svg") no-repeat;
   background-size: cover;
@@ -274,6 +271,12 @@ input[type=range]::-moz-range-thumb:active {
   background-position: center;
 }
 
+@media only screen and (min-width: 1441px) {
+  body {
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media only screen and (max-width: 415px) {
   .slider {
     order: 1;

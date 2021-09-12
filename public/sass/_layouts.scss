@@ -1,17 +1,14 @@
 body{
-    background: $desaturated-blue-dark;
+    background: $grayish-blue-3;
     position: relative;
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .banner{
     top: 0;
     height: 50vh;
     width: 100%;
     position: absolute;
-    background: red;
     left: 0;
     background: url('/public/images/bg-pattern.svg') no-repeat;
     background-size: cover;
@@ -251,6 +248,12 @@ input[type=range]::-moz-range-thumb {
         cursor: grabbing;
         background-position: center;
     }
+  }
+  @media only screen and (min-width: 1441px){
+      body{
+          justify-content: center;
+          align-items: center;
+      }
   }
 
   @media only screen and (max-width: 415px)   {
