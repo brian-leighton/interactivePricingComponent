@@ -18,7 +18,7 @@ p {
 }
 
 body {
-  background: palegoldenrod;
+  background: #293356;
   position: relative;
   min-height: 100vh;
   display: flex;
@@ -39,6 +39,9 @@ body {
 
 .message {
   margin-bottom: 3.7rem;
+  position: relative;
+}
+.message h1, .message p {
   position: relative;
 }
 .message h1 {
@@ -72,7 +75,7 @@ body {
 .cta__perks {
   flex: 1;
 }
-.cta div {
+.cta aside {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,6 +111,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   padding: 2rem 0;
+  border-bottom: 1px solid #eaeefb;
 }
 .pricing__views {
   display: flex;
@@ -145,6 +149,17 @@ body {
   color: #858fad;
   position: relative;
 }
+.pricing__payment-frequency p:last-of-type:after {
+  content: "25% discount";
+  display: inline-block;
+  transform: translateX(10%);
+  width: max-content;
+  font-size: 10px;
+  background: #feece7;
+  color: #ff8c66;
+  padding: 0.12rem 0.35rem;
+  border-radius: 2rem;
+}
 .pricing__payment-frequency p span {
   transform: translateX(10%);
   width: max-content;
@@ -173,6 +188,13 @@ body {
 .message {
   width: 100%;
   text-align: center;
+  position: relative;
+}
+.message img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
 }
 
 .input__switch label {
@@ -251,6 +273,57 @@ input[type=range]::-moz-range-thumb:active {
   background-repeat: no-repeat;
   cursor: grabbing;
   background-position: center;
+}
+
+@media only screen and (max-width: 415px) {
+  .slider {
+    order: 1;
+    margin: 0;
+    padding: 2rem 0;
+  }
+
+  .pricing__views {
+    order: 0;
+    flex: 1;
+  }
+  .pricing__cost {
+    order: 3;
+    flex: 1;
+    justify-content: center;
+    padding-bottom: 2.5rem;
+  }
+  .pricing__payment-frequency {
+    order: 4;
+    padding-left: 0;
+  }
+  .pricing__payment-frequency p:last-of-type::after {
+    content: "-25%";
+  }
+
+  .cta {
+    flex-wrap: wrap;
+  }
+  .cta ul {
+    flex: 1 0 100%;
+    padding-bottom: 2.5rem;
+  }
+  .cta aside {
+    flex: 1 0 100%;
+    margin-bottom: 1rem;
+  }
+  .cta__button {
+    max-width: max-content;
+  }
+
+  .message h1 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  .message p {
+    max-width: 22ch;
+    line-height: 1.5rem;
+    margin: 0 auto;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

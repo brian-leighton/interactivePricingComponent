@@ -1,5 +1,5 @@
 body{
-    background: palegoldenrod;
+    background: $desaturated-blue-dark;
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -20,6 +20,9 @@ body{
 .message{
     margin-bottom: 3.7rem;
     position: relative;
+    h1,p{
+        position: relative;
+    }
     h1{
         color: $desaturated-blue-dark;
         font-size: 1.9rem;
@@ -52,7 +55,7 @@ body{
     &__perks{
         flex: 1;
     }
-    & div {
+    & aside {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -87,6 +90,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     padding: 2rem 0;
+    border-bottom: 1px solid $grayish-blue-1;
     &__views{
         display: flex;
         justify-content: center;
@@ -124,6 +128,17 @@ body{
             color: $grayish-blue-3;
             position: relative;
         }
+        & p:last-of-type:after{
+            content: "25% discount";
+            display: inline-block;
+            transform: translateX(10%);
+            width: max-content;
+            font-size: 10px;
+            background: $red-gray;
+            color: $red-light;
+            padding: .12rem .35rem;
+            border-radius: 2rem;
+        }
         & p span{
             transform: translateX(10%);
             width: max-content;
@@ -151,6 +166,13 @@ body{
 .message{
     width: 100%;
     text-align: center;
+    position: relative;
+    & img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+    }
 }
 
 .input__switch{
@@ -228,5 +250,58 @@ input[type=range]::-moz-range-thumb {
         background-repeat: no-repeat;
         cursor: grabbing;
         background-position: center;
+    }
+  }
+
+  @media only screen and (max-width: 415px)   {
+    .slider{
+        order: 1;
+        margin: 0;
+        padding: 2rem 0;
+    }
+    .pricing{
+        &__views{
+            order: 0;
+            flex: 1;
+        }
+        &__cost{
+            order: 3;
+            flex: 1;
+            justify-content: center;
+            padding-bottom: 2.5rem;
+        }
+        &__payment-frequency{
+            order: 4;
+            padding-left: 0;
+
+            & p:last-of-type::after{
+                content:"-25%";
+            }
+        }
+      }
+    .cta{
+        flex-wrap: wrap;
+        & ul{
+            flex: 1 0 100%;
+            padding-bottom: 2.5rem;
+        }
+        & aside{
+            flex: 1 0 100%;
+            margin-bottom: 1rem;
+        }
+        &__button{
+            max-width: max-content;
+        }
+    }
+    .message{
+        h1 {
+            font-size: 1.5rem;
+            padding-bottom: 1rem;
+        }
+        p {
+            max-width: 22ch;
+            line-height: 1.5rem;
+            margin: 0 auto;
+        }
     }
   }

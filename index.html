@@ -6,46 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Pricing Component</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet"> 
     <link rel="shortcut icon" type="image/jpg" href="public/images/favicon-32x32.png"/>
     <link rel="stylesheet" type="text/css" href="public/css/index.css">
 </head>
 <body>
     <div class="card">
         <div class="banner"></div>
-        <div class="message">
+        <main class="message">
+            <img src="public/images/pattern-circles.svg">
             <h1>Simple, traffic based pricing</h1>
             <p>Sign-up for our 30-day trial. No credit card required</p>
-        </div>
+        </main>
         <div class="pricing-component">
-            <div class="pricing">
+            <section class="pricing">
                 <div class="pricing__views">100k pageviews</div>
                 <div class="pricing__cost">
                     <div class="pricing__cost--dollars">$16.00</div>
                     <div class="pricing__cost--frequency">/ month</div>
                 </div>
-                <form class="slider"><input type="range" min="0" max="100"></form>
+                <form class="slider"><input id="slider" type="range" min="0" max="100"></form>
                 <div class="pricing__payment-frequency">
                     <p>Monthly Billing</p>
                     <div class="input__switch">
-                        <!-- <label for="input__switch">Monthly</label> -->
-                        <input id="input__switch" class="input__switch--btn" type="checkbox">
-                        <label for="input__switch"></label>
+                        <input class="input__switch--btn" id="discountBtn" type="checkbox">
+                        <label for="discountBtn"></label>
                     </div>
-                    <p>Yearly Billing <span>25% discount</span></p>
+                    <p>Yearly Billing</p>
                 </div>
-            </div>
-            <div class="cta">
+            </section>
+            <section class="cta">
                 <ul class="cta__perks">
                     <li><img src="/public/images/icon-check.svg"> Unlimited websites</li>
                     <li><img src="/public/images/icon-check.svg">100% data ownership</li>
                     <li><img src="/public/images/icon-check.svg">E-mail reports</li>
                 </ul>
-                <div>
+                <aside>
                     <div class="cta__button">Start my trial</div>
-                </div>
-            </div>
+                </aside>
+            </section>
         </div>
     </div>
     <script src="public/script/index.js"></script>

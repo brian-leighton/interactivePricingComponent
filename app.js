@@ -8,5 +8,4 @@ const express = require('express'),
           res.sendFile(__dirname + '/index.html');
       });
       app.listen(PORT, () => {
-          console.log('listening on: ', PORT);
       });
