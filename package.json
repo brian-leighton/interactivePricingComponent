@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "app.js",
     "devStart": "nodemon app.js",
     "compile:sass": "sass --watch ./public/sass/main.scss ./public/css/index.css ",
     "test": "echo \"Error: no test specified\" && exit 1"
