@@ -82,8 +82,8 @@ body{
     background-color: $very-pale-blue;
     position: relative;
     background-size: contain;
-    overflow: hidden;
-    width: min(1200px, 100%);
+    // overflow: hidden;
+    width: min(1440px, 100%);
     padding: 5rem 2rem; 
 }
 .pricing{
